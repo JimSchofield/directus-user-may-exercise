@@ -1,7 +1,0 @@
-"use strict";
-
-var _user = _interopRequireDefault(require("./user1.json"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log(_user.default);
