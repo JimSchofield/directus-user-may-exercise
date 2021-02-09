@@ -6,9 +6,9 @@ const userPerms = {
       role: 3,
       status: null,
       create: 'full',
-      read: 'mine',
-      update: 'none',
-      delete: 'none',
+      read: 'full',
+      update: 'full',
+      delete: 'full',
       comment: 'update',
       explain: 'none',
       read_field_blacklist: [],
@@ -21,9 +21,9 @@ const userPerms = {
       role: 3,
       status: null,
       create: 'full',
-      read: 'mine',
-      update: 'none',
-      delete: 'none',
+      read: 'full',
+      update: 'role',
+      delete: 'role',
       comment: 'update',
       explain: 'none',
       read_field_blacklist: [],
@@ -33,10 +33,10 @@ const userPerms = {
     {
       id: 3,
       collection: 'users',
-      role: 1,
+      role: 3,
       status: null,
-      create: 'full',
-      read: 'mine',
+      create: 'none',
+      read: 'full',
       update: 'none',
       delete: 'none',
       comment: 'update',
@@ -48,4 +48,27 @@ const userPerms = {
   ]
 };
 
-module.exports = userPerms;
+const user = {
+  id: 1,
+  status: 'active',
+  role: 2,
+  first_name: 'test',
+  last_name: 'User',
+  email: 'test@example.com',
+  token: 'test',
+  last_access_on: '2020-01-13T19:55:18+00:00',
+  last_page: '/my-project/settings/collections/a',
+  external_id: null,
+  theme: 'auto',
+  '2fa_secret': null,
+  password_reset_token: null,
+  timezone: 'America/New_York',
+  locale: 'en-US',
+  locale_options: null,
+  avatar: null,
+  company: null,
+  title: null,
+  email_notifications: true
+};
+
+module.exports = { userPerms, user };
